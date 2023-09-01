@@ -1,0 +1,15 @@
+{
+    "name": "bc_proyecto_int__ezequiel-roberto-correa",
+    "version": "1.0.0",
+    "description": "Inicio de Sass",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo Error: no test specified  && exit 1",
+      "sass" :  "sass --watch ./scr/styles.sass:./public/styles.css"
+    },
+    "keywords": [
+      "github"
+    ],
+    "author": "Ezequiel Correa",
+    "license": "ISC"
+  }

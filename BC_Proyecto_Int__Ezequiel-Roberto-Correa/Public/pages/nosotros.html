@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Roberto Ezequiel Correa"/>
+            
+        <meta name="copyright" content="Estudiante del Bootcamp fullstack engineer" />
+        <meta name="description" 
+                content=" Soy un estudiante de Educación IT, creando mi proyecyo integrador"  />
+
+
+        <title>Proyecto Integrador</title>
+    
+        <link rel="icon" href="../images/favi/favicon.ico">
+        <link rel="icon" href="../images/favi/android-chrome-192x192.png">
+        <link rel="icon" href="../images/favi/android-chrome-512x512.png">
+        <link rel="icon" href="../images/favi/apple-touch-icon.png">
+        <link rel="icon" href="../images/favi/favicon-16x16.png">
+        <link rel="icon" href="../images/favi/favicon-32x32.png">
+        
+    
+        <link rel="stylesheet" href="../styles.css">
+        
+    </head>
+</head>
+<body id="body">
+    <video onload="mostrarVideo()" id="videoFondo" muted autoplay loop>
+        <source id="mostrarVideo" src="../images/video/video2.mp4">
+    </video>
+
+    <header>
+        <div class="nav">
+
+            <a class="aLogo" href="../index.html">
+            <img src="../images/logo.png" alt="logo">   
+            </a>
+            <h2>RC MOTORS</h2>
+            
+            <a onclick="openMenu()" id="menu" href="javascript:void(0);"><i class="fa-solid fa-bars fa-sm" style="color: #fcfcfd;"></i></a>
+            <ul id="links">
+                <div class="busqueda">
+                    <input type="text" placeholder="Buscar">
+                        <div class="btn">
+                            <i class="fa fa-search"></i>
+                        </div>
+                </div>
+                <li><a class="activado" href="../index.html">Inicio</a></li>
+                <li><a class="activado" href="../pages/modelos.html">Modelos</a></li>
+                <li><a class="activado" href="../pages/contacto.html">Contacto</a></li>
+                <li><a class="activado"  href="../pages/nosotros.html">Nosotros</a></li>
+                <li><a class="activado"  href="../pages/alta.html">Alta</a></li>
+                
+            </ul>
+            
+        </div>
+    </header>
+    <aside></aside>
+    <main class="mainNosotros">
+        <article class="articleNosotros">
+            <h1 class="h1Nosotros">Historia</h1>
+            <div class="divNosotros1">
+                <p class="pNosotros">Como muchas empresas de éxito, la Harley-Davidson Motor Company nació con poco más que un sueño y mucho trabajo duro. En 1903 cuatro jóvenes emprendedores ambiciosos construyeron la primera motocicleta Harley-Davidson dentro de un cobertizo de madera en Milwaukee, Wisconsin.
+
+                    Nuestros fundadores fueron los hermanos Walter, William y Arthur Davidson y Bill Harley.
+                    
+                    Hoy en día Harley-Davidson emplea a más de 9.700 personas en todo el mundo.
+                    
+                    Las oficinas centrales de la Motor Company siguen situadas cerca del famoso cobertizo, justo al oeste del centro de Milwaukee.
+                    
+                    Hoy en día Harley-Davidson Inc. fábrica y vende más de 330.000 motocicletas en todo el mundo y tiene el compromiso público de crecer cada año.</p>
+                <img class="imgNosotros" src="../images/nosotros.png" alt="">
+            </div>
+            <div class="divNosotros2">
+                <p class="pNosotros">En el año 2.005 Harley-Davidson celebró el hito de haber obtenido 20 años consecutivos de récord en facturación, beneficios y ventas al público.
+
+                    En el año 2007, Harley-Davidson Argentina introdujo la marca Buell en el país.
+                    
+                    Buell completa nuestra familia de productos y ofrece algo para todo el mundo. Incluso a pesar de que Harley-Davidson® es una marca fiel a su tradición, disponemos de centros de desarrollo, distribución y fábricas dotadas de la tecnología más avanzada.
+                    
+                    Nuestras motos se fabrican en tres puntos geográficos de Estados Unidos: en Wisconsin, Pennsylvania y Kansas City, Missouri.
+                    
+                    El centro de desarrollo y el centro de distribución ayudan a hacer llegar las motocicletas y la gama de accesorios, recambios y MotorClothes® a nuestro concesionario.</p>
+                <img class="imgNosotros" src="../images/nosotros1.png" alt="">
+            </div>
+            <div class="divNosotros1">
+                <p class="pNosotros">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In expedita libero quidem blanditiis porro. Quis, illo nisi. Soluta laboriosam, aut sed iusto, dolorem neque veritatis, omnis alias culpa reprehenderit ab voluptatibus eligendi voluptates rerum molestias in hic tempore quia! Minus pariatur atque veritatis, voluptatem vero soluta doloremque adipisci illo inventore fugiat quidem mollitia assumenda modi quod explicabo, repellat quaerat ut voluptatum ullam dicta eum harum iusto. Eos eum velit dicta esse. Harum iste porro tenetur minima tempora. Odit odio ad doloribus, aperiam recusandae fugit aut, vel vitae perspiciatis exercitationem itaque inventore dignissimos ipsum dolorum ipsa. Odio consequuntur blanditiis ullam tempore?</p>
+                <img class="imgNosotros" src="../images/nosotros2.png" alt="">
+            </div>
+        </article>
+    </main>
+    <footer>
+        <article class="artFooter">
+            <div class="divVentas">
+                <h2 class="h2footer">Ventas</h2>
+                <ul class="ulfooter">
+                    <li class="tel">
+                        <img src="../images/icons/telefono.svg" alt="telefono">
+                        <p>Tel: +54 112222222</p>
+                    </li>
+                    <li class="email">
+                        <img src="../images/icons/mail.svg" alt="mail">
+                        <p>Email: Ventas@rcmotors.com</p>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul class="ulLinks">
+                    <li>
+                        <a href="../index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="../pages/contacto.html">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="../pages/nosotros.html">Nosotros</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div>
+                <h2 class="h2footer">Nos encontramos en:</h2>
+                <p> Calle 1354,Caba,Argentina</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13133.337016595504!2d-58.42875065!3d-34.620992550000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1693100472550!5m2!1ses-419!2sar" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </article>
+    </footer>
+    
+    <script src="https://kit.fontawesome.com/8babc979b9.js" crossorigin="anonymous"></script>
+    <script src="../index.js"></script>
+</body>
+</html>

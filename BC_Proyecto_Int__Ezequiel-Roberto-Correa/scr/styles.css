@@ -1,0 +1,890 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;500;600;700&family=Signika+Negative:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;500;600;700&family=Signika+Negative:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;500;600;700&family=Signika+Negative:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;500;600;700&family=Signika+Negative:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;500;600;700&family=Signika+Negative:wght@300;400&display=swap");
+html {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+body #videoFondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -2;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: auto;
+}
+
+@media (max-width: 390px) {
+  body {
+    margin: 0;
+  }
+  body #videoFondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: -2;
+  }
+}
+header .nav {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+header img {
+  height: 40px;
+  margin-left: 67%;
+  margin-top: 24%;
+}
+header #menu {
+  display: none;
+}
+header #links {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Sen", sans-serif;
+  color: white;
+  position: relative;
+  right: -13rem;
+  padding: 0%;
+  width: 30%;
+}
+header #links li {
+  list-style: none;
+}
+header #links .busqueda {
+  position: absolute;
+  left: 9px;
+  top: -23%;
+  transform: translate(-100%, 0%);
+  padding: 10px;
+}
+header #links input {
+  outline: none;
+  height: 29px;
+  width: 0;
+  padding: 0 13px;
+  color: #000;
+  border-radius: 50px;
+  font-size: 18px;
+  border: 1px solid #000000;
+  transition: all 0.7s ease;
+  position: relative;
+  top: -11px;
+  left: 9px;
+}
+header #links ::-moz-placeholder {
+  color: grey;
+}
+header #links ::placeholder {
+  color: grey;
+}
+header #links .btn {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  line-height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+header #links .btn i {
+  font-size: 19px;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 80px;
+  transition: all 0.7s ease;
+  position: relative;
+  top: -84%;
+  left: -1px;
+}
+header #links .btn:hover {
+  background: #ffffff;
+}
+header #links .busqueda:hover input {
+  width: 180px;
+}
+header #links .busqueda:hover i {
+  transform: rotate(-360deg);
+}
+header #links .activado {
+  color: white;
+  text-decoration: none;
+}
+header h2 {
+  font-family: "Sen", sans-serif;
+  color: white;
+  margin-left: 40%;
+  font-size: 25px;
+}
+
+@media (max-width: 390px) {
+  header .nav {
+    position: inherit;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 64px;
+    flex-wrap: wrap;
+  }
+  header .aLogo {
+    width: 6%;
+  }
+  header .aLogo img {
+    width: 193%;
+    margin: 59%;
+  }
+  header h2 {
+    font-family: "Sen", sans-serif;
+    color: white;
+    margin-left: 27%;
+    font-size: 25px;
+    margin-top: 5%;
+  }
+  header #links {
+    display: none;
+  }
+  header #links .busqueda {
+    position: sticky;
+    left: 186px;
+    top: 6rem;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+  }
+  header #links .activado {
+    color: white;
+    text-decoration: none;
+  }
+  header #menu {
+    display: block;
+    margin-left: auto;
+    margin-right: 2%;
+    position: absolute;
+    left: 88%;
+    top: 30px;
+  }
+  header #menu i {
+    font-size: 30px;
+  }
+}
+.artMasVendido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(67, 67, 67, 0.434);
+  height: 23rem;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  position: relative;
+  top: 13rem;
+  left: 24rem;
+  width: 48%;
+}
+.artMasVendido h1 {
+  position: relative;
+  top: 1rem;
+  text-align: center;
+  font-family: "Sen", sans-serif;
+  color: white;
+  font-size: 27px;
+}
+.artMasVendido .masVendido {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  top: -2rem;
+}
+.artMasVendido .masVendido .contenedorMoto {
+  height: 86%;
+  width: 50%;
+  padding: 2px;
+  margin-top: 6%;
+}
+.artMasVendido .masVendido .contenedorMoto ul, .artMasVendido .masVendido .contenedorMoto li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.artMasVendido .masVendido .contenedorMoto ul.sliderMoto {
+  position: relative;
+  width: 98%;
+  height: auto;
+  top: 9px;
+  left: 7px;
+}
+.artMasVendido .masVendido .contenedorMoto ul.sliderMoto li {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  width: inherit;
+  height: inherit;
+  transition: opacity 0.5s;
+  background: #fff;
+  font-family: "Sen", sans-serif;
+  font-size: 17px;
+}
+.artMasVendido .masVendido .contenedorMoto ul.sliderMoto li img {
+  width: 100%;
+  height: auto;
+}
+.artMasVendido .masVendido .contenedorMoto ul .sliderMoto li:first-child {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.artMasVendido .masVendido .contenedorMoto #sliderMoto2, .artMasVendido .masVendido .contenedorMoto #sliderMoto3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.artMasVendido .masVendido .contenedorMoto ul.sliderMoto li:target {
+  opacity: 1;
+}
+.artMasVendido .masVendido .contenedorMoto #menuColores {
+  display: block;
+  list-style: circle;
+  position: relative;
+  top: 90%;
+  left: 43%;
+  width: 60px;
+}
+.artMasVendido .masVendido .contenedorMoto #menuColores li {
+  display: inline-block;
+  text-align: center;
+}
+.artMasVendido .masVendido .contenedorMoto #menuColores li .color1 {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.855);
+  padding: 5px;
+  width: 5px;
+  height: 5px;
+  font-size: 20px;
+  border-radius: 100%;
+}
+.artMasVendido .masVendido .contenedorMoto #menuColores li .color2 {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: rgba(246, 255, 189, 0.855);
+  padding: 5px;
+  width: 5px;
+  height: 5px;
+  font-size: 20px;
+  border-radius: 100%;
+}
+.artMasVendido .masVendido .contenedorMoto #menuColores li .color3 {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: rgba(85, 111, 66, 0.855);
+  padding: 5px;
+  width: 5px;
+  height: 5px;
+  font-size: 20px;
+  border-radius: 100%;
+}
+.artMasVendido .color1 a {
+  background: black;
+}
+.artMasVendido .color2 a {
+  background: rgb(236, 236, 144);
+}
+.artMasVendido .color3 a {
+  background: rgb(47, 74, 47);
+}
+.artMasVendido #infoMoto {
+  width: 50%;
+  height: 86%;
+  margin-top: 6%;
+}
+.artMasVendido #infoIconos {
+  height: 16%;
+  width: 100%;
+  margin-top: -16px;
+}
+.artMasVendido #infoIconos ul {
+  width: 100%;
+  margin-left: -12%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.artMasVendido #infoIconos p {
+  font-family: "Sen", sans-serif;
+}
+.artMasVendido #descripcion {
+  font-family: "Sen", sans-serif;
+  color: white;
+  width: 90%;
+}
+.artMasVendido #cc {
+  display: flex;
+  align-items: center;
+  color: white;
+  list-style: none;
+}
+.artMasVendido #cc p {
+  font-family: "Sen", sans-serif;
+}
+.artMasVendido #imgcc {
+  width: 34px;
+  margin-right: 11%;
+}
+.artMasVendido #tacometro {
+  display: flex;
+  align-items: center;
+  color: white;
+  list-style: none;
+  width: 30%;
+}
+.artMasVendido #imgTacometro {
+  width: 34px;
+  margin-right: 11%;
+  margin-top: -7%;
+}
+.artMasVendido #consumo {
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.artMasVendido #imgConsumo {
+  width: 24px;
+  margin-right: 11%;
+}
+
+.button {
+  background: rgb(255, 255, 255);
+  position: relative;
+  color: rgb(3, 3, 3);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Sen", sans-serif;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  padding: 10px 30px;
+  transition: 0.5s;
+  left: 91px;
+}
+
+.button:hover {
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+  letter-spacing: 0.25em;
+  box-shadow: 0 0 35px var(--clr);
+}
+
+@media (max-width: 390px) {
+  .artMasVendido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(67, 67, 67, 0.434);
+    height: 23rem;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    position: relative;
+    top: 17rem;
+    left: 10%;
+    width: 80%;
+    height: auto;
+    align-items: center;
+  }
+  .artMasVendido h1 {
+    position: relative;
+    top: 0rem;
+    text-align: center;
+    font-family: "Sen", sans-serif;
+    color: white;
+    font-size: 21px;
+    margin-bottom: 12%;
+  }
+  .artMasVendido .masVendido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -1rem;
+  }
+  .artMasVendido .masVendido .contenedorMoto {
+    height: 86%;
+    width: 92%;
+    padding: 2px;
+    margin-top: 0;
+  }
+  .artMasVendido .masVendido .contenedorMoto ul, .artMasVendido .masVendido .contenedorMoto li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .artMasVendido .masVendido .contenedorMoto ul.sliderMoto {
+    position: relative;
+    width: 75%;
+    height: 0;
+    top: 0;
+    left: 60px;
+  }
+  .artMasVendido .masVendido .contenedorMoto ul.sliderMoto li {
+    position: relative;
+    width: 132%;
+    height: auto;
+    top: -7px;
+    left: -56px;
+  }
+  .artMasVendido .masVendido .contenedorMoto #sliderMoto2 {
+    position: relative;
+    width: 132%;
+    height: auto;
+    top: -180px;
+    left: -56px;
+  }
+  .artMasVendido .masVendido .contenedorMoto #sliderMoto3 {
+    position: relative;
+    width: 132%;
+    height: auto;
+    top: -351px;
+    left: -56px;
+  }
+  .artMasVendido .masVendido .contenedorMoto #menuColores {
+    display: block;
+    list-style: circle;
+    position: relative;
+    top: 184px;
+    left: 43%;
+    width: 60px;
+  }
+  .artMasVendido .masVendido #infoMoto {
+    width: 95%;
+    height: auto;
+    margin-top: 54%;
+  }
+  .artMasVendido .masVendido #infoIconos {
+    height: 16%;
+    width: 100%;
+    margin-top: -8px;
+  }
+  .artMasVendido .masVendido #infoIconos ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    justify-content: space-around;
+    margin-left: -12%;
+    margin-top: 12%;
+    margin-bottom: -5%;
+  }
+  .artMasVendido .masVendido #tacometro, .artMasVendido .masVendido #cc, .artMasVendido .masVendido #consumo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    list-style: none;
+    width: 30%;
+  }
+  .artMasVendido .masVendido .button {
+    background: rgb(255, 255, 255);
+    position: relative;
+    color: rgb(3, 3, 3);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: "Sen", sans-serif;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    padding: 10px 30px;
+    transition: 0.5s;
+    left: 72px;
+  }
+  .artMasVendido .masVendido .button:hover {
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px var(--clr);
+  }
+}
+.contenedor {
+  background-color: rgb(255, 255, 255);
+  /* margin-top: 15%; */
+  height: auto;
+  position: relative;
+  top: 30rem;
+}
+.contenedor .slider {
+  display: flex;
+  padding: 0;
+  width: 100%;
+  margin-left: auto;
+}
+.contenedor .slider #slider1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Sen", sans-serif;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.contenedor .slider #slider1 img {
+  width: 15%;
+  margin-bottom: 4%;
+}
+.contenedor .slider #slider2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Sen", sans-serif;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.contenedor .slider #slider2 img {
+  width: 15%;
+  margin-bottom: 4%;
+}
+.contenedor .slider #slider3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Sen", sans-serif;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.contenedor .slider #slider3 img {
+  width: 15%;
+  margin-bottom: 4%;
+}
+.contenedor .menuSlider {
+  display: none;
+}
+
+.h1main {
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 50rem;
+  font-family: "Sen", sans-serif;
+}
+
+.articleNosotros {
+  background-color: rgba(67, 67, 67, 0.434);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  position: relative;
+  top: 7rem;
+  left: 120px;
+  width: 84%;
+  height: auto;
+  margin-bottom: -52rem;
+}
+.articleNosotros .h1Nosotros {
+  text-align: center;
+  font-family: "Sen", sans-serif;
+  color: white;
+  position: relative;
+  top: 19px;
+  font-size: 44px;
+}
+.articleNosotros .divNosotros1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2%;
+}
+.articleNosotros .divNosotros2 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding: 2%;
+}
+.articleNosotros .pNosotros {
+  color: white;
+  font-family: "Sen", sans-serif;
+}
+.articleNosotros .imgNosotros {
+  width: 40%;
+}
+
+.formContacto {
+  background-color: rgba(67, 67, 67, 0.434);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  position: relative;
+  top: 7rem;
+  left: 25rem;
+  width: 47%;
+  height: auto;
+  margin-bottom: -52rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formContacto label {
+  color: white;
+  font-family: "Sen", sans-serif;
+  margin-top: 6%;
+}
+.formContacto .error {
+  color: red;
+  font-family: "Sen", sans-serif;
+  font-size: 12px;
+  margin: 12px;
+}
+.formContacto .inputContacto {
+  background: none;
+  color: white;
+  font-size: 14px;
+  padding: 10px 10px 10px 5px;
+  margin: 12px;
+  width: 60%;
+  border: none;
+  border-bottom: 1px solid white;
+}
+.formContacto .selectContacto {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 18px;
+  font-family: "Sen", sans-serif;
+}
+.formContacto .textareaContacto {
+  background: none;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 60%;
+  margin-bottom: 3%;
+  font-family: "Sen", sans-serif;
+}
+.formContacto .buttonContacto {
+  background: rgb(255, 255, 255);
+  position: relative;
+  color: rgb(3, 3, 3);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Sen", sans-serif;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  padding: 10px 30px;
+  transition: 0.5s;
+  left: 0;
+  margin-bottom: 4%;
+}
+.formContacto .buttonContacto:hover {
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+  letter-spacing: 0.25em;
+  box-shadow: 0 0 35px var(--clr);
+}
+
+@media (max-width: 390px) {
+  .contenedor {
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 20%;
+    height: 11rem;
+    padding: 2px;
+  }
+  .contenedor ul, .contenedor li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .contenedor ul.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: -12px;
+  }
+  .contenedor ul.slider li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity 0.5s;
+    background: #fff;
+    font-family: "Sen", sans-serif;
+    font-size: 17px;
+  }
+  .contenedor ul.slider li img {
+    width: 14%;
+    height: auto;
+  }
+  .contenedor ul.slider li:first-child {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contenedor #slider2, .contenedor #slider3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contenedor ul.slider li:target {
+    opacity: 1;
+  }
+  .contenedor .menuSlider {
+    display: block;
+    list-style: circle;
+    position: relative;
+    top: -9%;
+    left: 43%;
+    width: 60px;
+  }
+  .contenedor .menuSlider li {
+    display: inline-block;
+    text-align: center;
+  }
+  .contenedor .menuSlider li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+    width: 5px;
+    height: 5px;
+    font-size: 20px;
+    border-radius: 100%;
+  }
+  .h1main {
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 51rem;
+    font-family: "Sen", sans-serif;
+  }
+  .articleNosotros {
+    background-color: rgba(67, 67, 67, 0.434);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    position: relative;
+    top: 7rem;
+    left: 29px;
+    width: 84%;
+    height: auto;
+    margin-bottom: -52rem;
+  }
+  .articleNosotros .h1Nosotros {
+    text-align: center;
+    font-family: "Sen", sans-serif;
+    color: white;
+    position: relative;
+    top: 19px;
+    font-size: 44px;
+  }
+  .articleNosotros .divNosotros1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+  }
+  .articleNosotros .divNosotros2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+  }
+  .articleNosotros .pNosotros {
+    color: white;
+    font-family: "Sen", sans-serif;
+  }
+  .articleNosotros .imgNosotros {
+    width: 100%;
+  }
+}
+.artFooter {
+  background-color: rgba(0, 0, 0, 0.762);
+  position: relative;
+  top: 73rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  color: white;
+  gap: 20%;
+  height: 20rem;
+}
+.artFooter .h2footer {
+  color: white;
+  font-family: "Sen", sans-serif;
+  text-align: center;
+}
+.artFooter img {
+  width: 20px;
+}
+.artFooter .ulfooter {
+  list-style: none;
+  color: white;
+}
+.artFooter li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  font-family: "Sen", sans-serif;
+}
+.artFooter a {
+  text-decoration: none;
+  color: white;
+  margin: 18%;
+}
+.artFooter p {
+  font-family: "Sen", sans-serif;
+  text-align: center;
+}
+
+@media (max-width: 390px) {
+  .artFooter {
+    background-color: rgba(0, 0, 0, 0.762);
+    position: relative;
+    top: 73rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 20%;
+    height: 100%;
+    align-content: center;
+    flex-wrap: nowrap;
+  }
+  .tel {
+    margin-left: 8%;
+  }
+  .email {
+    margin-left: -9%;
+  }
+  .ulLinks {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -50%;
+  }
+}/*# sourceMappingURL=styles.css.map */
