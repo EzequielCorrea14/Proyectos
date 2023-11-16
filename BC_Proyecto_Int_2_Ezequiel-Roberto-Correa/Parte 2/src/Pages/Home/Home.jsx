@@ -1,6 +1,6 @@
 import React from 'react'
-import CardHome from './CardHome'
-import SliderInfo from './SliderInfo'
+import CardHome from './Components/CardHome'
+import SliderInfo from './Components/SliderInfo'
 
 const Home = () => {
   return (
