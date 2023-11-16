@@ -1,7 +1,8 @@
 import { useState } from "react";
-import  {productFormDictionary}  from ".scr//utils/productFormDictionary.js";
+
 import { toast } from "react-toastify";
 import BasicModal from "./BasicModal";
+import { productFormDictionary } from "../../../utils/productFormDictionary";
 
 
 const ProductForm = ({fetchData}) => {

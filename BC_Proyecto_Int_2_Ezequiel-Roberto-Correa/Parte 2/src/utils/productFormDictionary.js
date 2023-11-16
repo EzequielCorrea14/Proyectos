@@ -1,7 +1,7 @@
 export const productFormDictionary = {
     NAME: 'name',
     PRICE: 'price',
-    CC: 'description',
+    CC: 'cc',
     VEL: 'vel',
     KM: 'km',
     COLOR1: 'color1',
@@ -10,5 +10,6 @@ export const productFormDictionary = {
     IMAGE1: 'image1',
     IMAGE2: 'image2',
     IMAGE3: 'image3',
-    DECRIPTION: 'description'
+    DECRIPTION: 'description',
+    STOCK: 'stock'
 } 
