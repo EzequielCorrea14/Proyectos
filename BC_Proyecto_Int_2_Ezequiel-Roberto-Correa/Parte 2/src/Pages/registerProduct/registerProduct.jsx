@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { productFormDictionary } from "./utils/productFormDictionary";
+import { productFormDictionary } from "../../utils/productFormDictionary";
 import { toast } from "react-toastify";
-import BasicModal from "./BasicModal";
+// import BasicModal from "./BasicModal";
 
 
 const ProductForm = ({fetchData}) => {
@@ -95,7 +95,7 @@ const ProductForm = ({fetchData}) => {
           )
         }
         />
-        <p class="error" id="errorName"></p>
+        <p className="error" id="errorName"></p>
         <label for="">Precio:</label>
         <input
             type="number"
@@ -108,8 +108,8 @@ const ProductForm = ({fetchData}) => {
             }
         />
         <h2>Info</h2>
-        <div class="divInfoAlta">
-            <div class="divCaracteristicas">
+        <div className="divInfoAlta">
+            <div className="divCaracteristicas">
                 <label for="">Cilindrada:</label>
                     <div>
                         <input  type="number" 
@@ -126,8 +126,8 @@ const ProductForm = ({fetchData}) => {
                         <p>CC.</p>
                         </div>
                     </div>
-                    <div class="divInfoAlta" >
-                        <div class="divCaracteristicas">
+                    <div className="divInfoAlta" >
+                        <div className="divCaracteristicas">
                             <label for="">Aceleracion:</label>
                             <div >
                                 <p>0-100</p>
@@ -146,8 +146,8 @@ const ProductForm = ({fetchData}) => {
                             </div>
                         </div>
                     </div>
-                    <div class="divInfoAlta">
-                        <div class="divCaracteristicas" >
+                    <div className="divInfoAlta">
+                        <div className="divCaracteristicas" >
                             <label for="">Consumo:</label>
                             <div >
                                 <p>1L/</p>
@@ -168,7 +168,7 @@ const ProductForm = ({fetchData}) => {
                     </div>
                 </div>
                 <label for="">Colores:</label>
-            <div class="divColoresAlta">
+            <div className="divColoresAlta">
                 <select name="colores" id=""
                 onChange={(e) =>
                     handleUpdateProductFormValues(
@@ -214,7 +214,7 @@ const ProductForm = ({fetchData}) => {
             </div>
                 <label for="">Fotos</label>
                 
-                <input class="subirFoto" 
+                <input className="subirFoto" 
                        type="file" 
                        accept="image/png, .jpeg, .jpg"
                        onChange={(e) =>
@@ -224,7 +224,7 @@ const ProductForm = ({fetchData}) => {
                         )
                     }  
                        required />
-                <input class="subirFoto" 
+                <input className="subirFoto" 
                        type="file" 
                        accept="image/png, .jpeg, .jpg" 
                        onChange={(e) =>
@@ -234,7 +234,7 @@ const ProductForm = ({fetchData}) => {
                         )
                     }  
                        required />
-                <input class="subirFoto" 
+                <input className="subirFoto" 
                        type="file" 
                        accept="image/png, .jpeg, .jpg" 
                        onChange={(e) =>
@@ -247,7 +247,7 @@ const ProductForm = ({fetchData}) => {
             
             <label for="">Descripción:</label>
             <textarea id="descripcion" 
-                      class="textAreaAlta"
+                      className="textAreaAlta"
                       name="message"
                       cols="30" 
                       rows="10" 
@@ -258,7 +258,7 @@ const ProductForm = ({fetchData}) => {
                         productFormDictionary.DESCRIPTION
                         )
                     }  ></textarea>
-            <p class="error" id="errorDescripcion"></p>
+            <p className="error" id="errorDescripcion"></p>
             <label For="">Stock:</label>
             <input type="number" 
                    name="" 

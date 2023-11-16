@@ -1,13 +1,14 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import logo from './images/logo.png'
 
 const NavBar = () => {
 
-  const date = new date().getDay()
+  
   return (
-    <nav className='navbar'>
-        <a class="aLogo" href="./index.html">
-            <img src="./images/logo.png" alt="logo"/>   
+    <nav >
+        <a  href="./index.html">
+            <img src={logo} alt="logo"/>   
         </a>
         <h2>RC MOTORS</h2>
         <ul className='navbar-link'>
