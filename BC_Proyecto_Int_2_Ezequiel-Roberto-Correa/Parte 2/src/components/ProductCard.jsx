@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
 import { toast } from "react-toastify";
-import { FaCartShopping, FaTrashCan } from "react-icons/fa6";
+import { FaCartShopping} from "react-icons/fa6";
 import { CartContext } from "../Pages/Models/context/CartContext";
-import cc from "./images/motor.svg"
-import vel from "./images/tacometro.svg"
-import km from "./images/consumo.svg"
+import { PiEngineBold } from "react-icons/pi";
+import { LiaTachometerAltSolid } from "react-icons/lia";
+import { BsFuelPump } from "react-icons/bs";
 
 const ProductCard = ({ product, fetchProductsData }) => {
   const { addToCart } = useContext(CartContext)
@@ -50,20 +50,20 @@ const ProductCard = ({ product, fetchProductsData }) => {
                     <div id="infoIconos">
                         <ul id="ListaIconos">
                             <li id="cc">
-                                <img id="imgcc" src={cc} alt="" />
+                                <PiEngineBold/>
                                 <p>{product.cc}</p>
                                 <p>cc.</p>
                             </li>
                             <li id="tacometro">
 
-                                <img id="imgTacometro" src={vel} alt="velocidad"/>
+                                <LiaTachometerAltSolid/>
                                 <p> 0-100 </p>
                                 <p> {product.vel} </p>
                                 <p>s</p>
                             </li>
                             <li id="consumo">
 
-                                <img id="imgConsumo" src={km} alt="consumo"/>
+                                <BsFuelPump/>
                                 <p> 1/</p>
                                 <p>{product.km}</p>
                                 <p>km</p>

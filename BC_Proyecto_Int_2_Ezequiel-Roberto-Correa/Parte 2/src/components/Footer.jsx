@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route,Routes, Link, NavLink } from 'react-router-dom'
-import phone from "./images/telefono.svg"
-import mail from "./images/mail.svg"
+import { FiPhone } from "react-icons/fi";
+import { IoIosMail } from "react-icons/io";
 
 
 const Footer = () => {
@@ -12,11 +12,11 @@ const Footer = () => {
                 <h2 className="h2footer">Ventas</h2>
                 <ul className="ulfooter">
                     <li className="tel">
-                        <img src={phone} alt="telefono"/>
+                        <FiPhone/>
                         <p>Tel: +54 112222222</p>
                     </li>
                     <li className="email">
-                        <img src={mail} alt="mail"/>
+                        <IoIosMail/>
                         <p>Email: Ventas@rcmotors.com</p>
                     </li>
                 </ul>
