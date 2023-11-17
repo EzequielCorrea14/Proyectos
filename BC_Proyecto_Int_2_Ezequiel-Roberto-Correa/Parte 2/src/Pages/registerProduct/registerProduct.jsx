@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { productFormDictionary } from "../../utils/productFormDictionary";
 import { toast } from "react-toastify";
-// import BasicModal from "./BasicModal";
+import BasicModal from "../../components/BasicModal";
 
 
-const ProductForm = ({fetchData}) => {
+const registerProduct = ({fetchData}) => {
   const [productFormValues, setProductFormValues] = useState({
     name: "",
     description: "",
@@ -277,4 +277,4 @@ const ProductForm = ({fetchData}) => {
   );
 };
 
-export default ProductForm;
+export default registerProduct;

@@ -5,8 +5,8 @@ import { IoTimeOutline, IoCard, IoLocationOutline } from "react-icons/io5";
 const SliderInfo = () => {
   return (
     
-    <div class="contenedor">
-            <ul class="slider">
+    <div className="contenedor">
+            <ul className="slider">
                 <li id="slider1">
                     
                 <IoCard />Aceptamos todos los medios de pago</li>
@@ -17,7 +17,7 @@ const SliderInfo = () => {
                     
                 <IoLocationOutline />Calle 1354,Caba,Argentina</li>
             </ul>
-            <ul class="menuSlider">
+            <ul className="menuSlider">
                 <li>
                     <a href="#slider1"></a>
                 </li>

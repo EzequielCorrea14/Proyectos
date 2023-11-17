@@ -9,14 +9,43 @@ import NavBar from './components/navbar'
 import Background from './components/Background'
 import Footer from './components/Footer'
 import RegisterProduct from './Pages/RegisterProduct/RegisterProduct'
+import Header from './components/Header'
+import { useEffect, useState } from "react";
+
 
 
 
 function App() {
 
+  const [products, setProducts] = useState([]);
+  const [error, setError] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    fetchProductsData();
+  }, []);
+
+  const fetchProductsData = async () => {
+    const url = "https://653ad68f2e42fd0d54d47f1b.mockapi.io/api/products";
+
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      setProducts(data);
+      setIsLoading(false);
+    } catch (error) {
+      setError(true);
+    }
+  };
+  if (error) return <p>Hubo un error al cargar los productos.</p>;
+
+  if (isLoading) return <p>Cargando...</p>;
+
   
   return (
     <>
+    <Header fetchProductsData={fetchProductsData}/>
+    <NavBar/>
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/models" element={<Models/>} />
@@ -25,7 +54,6 @@ function App() {
       <Route path="/contact" element={<Contacts/>} />
       <Route path="*" element={<Page404/>} />
     </Routes>
-    <NavBar/>
     <Home/>
     <Background/>
     <Footer/>

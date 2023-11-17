@@ -37,8 +37,8 @@ const ProductCard = ({ product, fetchProductsData }) => {
                         <img className="imgSlider" src={product.image3} />
                         
                     </div>
-                    <a className="previo" onclick="plusSlides(-1)">&#10094</a>
-                    <a className="proximo" onclick="plusSlides(1)">&#10095</a>
+                    <a className="previo" onClick="plusSlides(-1)">&#10094</a>
+                    <a className="proximo" onClick="plusSlides(1)">&#10095</a>
                             
                 </div>
                 <div className="divColores">

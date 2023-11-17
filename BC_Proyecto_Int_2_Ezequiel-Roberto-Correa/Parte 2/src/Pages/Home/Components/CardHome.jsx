@@ -28,14 +28,14 @@ const CardHome = () => {
                         <img className="imgSlider" src={sport3} />
                         
                     </div>
-                    <a className="previo" onclick="plusSlides(-1)">&#10094</a>
-                    <a className="proximo" onclick="plusSlides(1)">&#10095</a>
+                    <a className="previo" onClick="plusSlides(-1)">&#10094</a>
+                    <a className="proximo" onClick="plusSlides(1)">&#10095</a>
                             
                 </div>
                 <div className="divColores">
-                    <span className="colores" onclick="currentSlides(1)" style="background-color: black;"></span>
-                    <span className="colores" onclick="currentSlides(2)" style="background-color: bisque;"></span>
-                    <span className="colores" onclick="currentSlides(3)" style="background-color: green;"></span>
+                    <span className="colores" onClick="currentSlides(1)" style="background-color: black;"></span>
+                    <span className="colores" onClick="currentSlides(2)" style="background-color: bisque;"></span>
+                    <span className="colores" onClick="currentSlides(3)" style="background-color: green;"></span>
                 </div>
                 <div id="infoMoto">
                     <div id="infoIconos">
