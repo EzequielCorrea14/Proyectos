@@ -53,10 +53,11 @@ function App() {
       <Route path="/registerProduct" element={<RegisterProduct/>} />
       <Route path="/contact" element={<Contacts/>} />
       <Route path="*" element={<Page404/>} />
+      <Home/>
+      <Background/>
+      <Footer/>
     </Routes>
-    <Home/>
-    <Background/>
-    <Footer/>
+    
     
 
     

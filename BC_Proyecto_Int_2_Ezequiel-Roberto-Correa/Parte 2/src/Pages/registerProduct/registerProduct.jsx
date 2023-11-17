@@ -85,6 +85,7 @@ const registerProduct = ({fetchData}) => {
     <div>
         <h1>Alta de Modelo</h1>
         <label for="">Nombre Modelo:</label>
+        <form action="">
         <input
             type="text"
         
@@ -271,7 +272,9 @@ const registerProduct = ({fetchData}) => {
                 }   />
       <button onClick={handleSubmitForm}>Agregar Producto</button>
         <button onClick={ () => setIsModalOpen(true)}>Abrir modal</button>
+        </form>
     </div>
+    
     <BasicModal isOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
     </>
   );

@@ -12,6 +12,7 @@ const NavBar = () => {
         </a>
         <h2>RC MOTORS</h2>
         <ul className='navbar-link'>
+          
             <li><NavLink to={'/'}>Home</NavLink></li>
             <li><NavLink to={'/registerProduct'}>Register Products</NavLink></li>
             <li><NavLink to={'/models'}>Models</NavLink></li>
