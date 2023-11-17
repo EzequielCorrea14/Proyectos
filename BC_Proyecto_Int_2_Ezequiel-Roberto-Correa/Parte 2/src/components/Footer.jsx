@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route,Routes, Link, NavLink } from 'react-router-dom'
+import {  Link, NavLink } from 'react-router-dom'
 import { FiPhone } from "react-icons/fi";
 import { IoIosMail } from "react-icons/io";
 
@@ -22,7 +22,7 @@ const Footer = () => {
                 </ul>
             </div>
             <div>
-                <Route>
+                
                     <ul>
                         <li><NavLink to={'/'}>Home</NavLink></li>
                         <li><NavLink to={'/registerProduct'}>Register Products</NavLink></li>
@@ -31,7 +31,7 @@ const Footer = () => {
                         <li><NavLink to={'/contact'}>Contact</NavLink></li>
 
                     </ul>
-                </Route>
+                
             </div>
             <div>
                 <h2 className="h2footer">Nos encontramos en:</h2>

@@ -1,5 +1,5 @@
 import './App.css'
-import { Route,Routes, Link, NavLink } from 'react-router-dom'
+import { Route,Routes, BrowserRouter } from 'react-router-dom'
 import Home from './pages/home/home'
 import About from './Pages/About/About'
 import Contacts from './Pages/Contact/contact'
@@ -9,7 +9,7 @@ import NavBar from './components/navbar'
 import Background from './components/Background'
 import Footer from './components/Footer'
 import RegisterProduct from './Pages/RegisterProduct/RegisterProduct'
-import Header from './components/Header'
+
 import { useEffect, useState } from "react";
 
 
@@ -53,10 +53,10 @@ function App() {
       <Route path="/registerProduct" element={<RegisterProduct/>} />
       <Route path="/contact" element={<Contacts/>} />
       <Route path="*" element={<Page404/>} />
-      <Home/>
-      <Background/>
-      <Footer/>
+      
     </Routes>
+      <Footer/>
+      <Background/>
     
     
 

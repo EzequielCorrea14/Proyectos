@@ -37,14 +37,14 @@ const ProductCard = ({ product, fetchProductsData }) => {
                         <img className="imgSlider" src={product.image3} />
                         
                     </div>
-                    <a className="previo" onClick="plusSlides(-1)">&#10094</a>
-                    <a className="proximo" onClick="plusSlides(1)">&#10095</a>
+                    <a className="previo" onClick="">&#10094</a>
+                    <a className="proximo" onClick="">&#10095</a>
                             
                 </div>
                 <div className="divColores">
-                    <span className="colores" onClick={() => currentSlides(1)} style={{ backgroundColor: product.color1 }}></span>
-                  <span className="colores" onClick={() => currentSlides(2)} style={{ backgroundColor: product.color2 }}></span>
-                  <span className="colores" onClick={() => currentSlides(3)} style={{ backgroundColor: product.color3 }}></span>
+                    <span className="colores" onClick='' style={{ backgroundColor: product.color1 }}></span>
+                  <span className="colores" onClick='' style={{ backgroundColor: product.color2 }}></span>
+                  <span className="colores" onClick='' style={{ backgroundColor: product.color3 }}></span>
                 </div>
                 <div id="infoMoto">
                     <div id="infoIconos">
