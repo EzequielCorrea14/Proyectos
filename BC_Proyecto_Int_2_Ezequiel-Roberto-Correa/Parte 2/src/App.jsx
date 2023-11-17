@@ -44,7 +44,7 @@ function App() {
   
   return (
     <>
-    <Header fetchProductsData={fetchProductsData}/>
+    
     <NavBar/>
     <Routes>
       <Route path="/" element={<Home/>} />
