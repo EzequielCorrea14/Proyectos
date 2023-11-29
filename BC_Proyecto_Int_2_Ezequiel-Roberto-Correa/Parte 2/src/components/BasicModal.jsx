@@ -28,14 +28,7 @@ const BasicModal = ({ isOpen, setIsOpen, title }) => {
   const closeModal = () => setIsOpen(false);
 
   const validateForm = () => {
-    // formValues.ageStart y ageEnd sean mayor a 0
-    // formValues.ageStart sea menor que ageEnd
-    /* if (
-      formValues.ageStart > 0 &&
-      formValues.ageEnd > 0 &&
-      formValues.ageStart < formValues.ageEnd
-    )
-      setValidForm(true); */
+    
     if (formValues.ageStart <= 0)
       setFormLabelValidation((prevState) => ({
         ...prevState,

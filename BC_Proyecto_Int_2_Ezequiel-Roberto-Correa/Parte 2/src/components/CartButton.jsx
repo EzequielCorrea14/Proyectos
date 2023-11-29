@@ -1,54 +1,80 @@
-import { useContext, useState } from "react";
-import { FaCartShopping, FaTrashCan, FaXmark } from "react-icons/fa6";
-import { CartContext } from "../Pages/Models/context/CartContext";
-import InformativeModal from "./InformativeModal";
+import React, { useContext, useEffect, useState } from 'react'
+import {  FaTrash } from "react-icons/fa";
+import { FaXmark} from "react-icons/fa6";
+import { IoCartOutline } from "react-icons/io5";
+import { CartContext } from '../context/CartContext';
+import { CgRemove,CgAdd } from "react-icons/cg";
+import { FaRegTrashCan } from "react-icons/fa6";
+
 
 const CartButton = () => {
-  const { cart, removeFromCart } = useContext(CartContext);
-  console.log(useContext)
-  const [isOpen, setIsOpen] = useState(false);
-  const [isOpenModa, setIsOpenModal] = useState(false)
-
-  const toggleCart = () => {
-    setIsOpen((prevState) => !prevState);
-    setIsOpenModal(true);
-  };
+    const { cart, setCart, clearCart, removeItem, totalItems, totalCart,addItem } = useContext(CartContext);
+    const [isOpen, setIsOpen] = useState(false)
+    const [total, setTotal] = useState(0);
+    const toggleCart=()=>{
+        setIsOpen(prevState => !prevState)
+    } 
+    useEffect(() => {
+        const newTotal = cart.reduce((acc, productCard) =>{
+            return acc + productCard.price
+        },0)
+        setTotal(newTotal);
+  }, [cart]);
 
   return (
     <>
-    <div className="cart-button-container">
-      <button className="cart-button" onClick={toggleCart}>
-        <FaCartShopping color="white" />
-      </button>
-      {isOpen && (
-        <div className="cart-overlay">
-          <div className="cart">
+        <div className="cart-button-container">
+        <button className='cart-button' onClick={toggleCart}> 
+        <IoCartOutline style={{color:'white'}} />
+        </button>
+        {isOpen && (
+          <div className='cart-overlay'>
+            <div className='cart'>
             <button className="close-button" onClick={toggleCart}>
               <FaXmark />
             </button>
-            <h2>Carrito de compras</h2>
             {cart.length > 0 ? (
-              <ul>
-                {cart.map((productCard) => (
-                  <li key={productCard.id}>
-                    {productCard.name} - ${productCard.price} -{" "}
-                    <FaTrashCan
-                      style={{ cursor: "pointer" }}
-                      onClick={() => removeFromCart(productCard.id)}
-                    />
-                  </li>
+              <>
+                {cart.map((item) => (
+                  <div className="cart-item" key={item.id}>
+                    <h4 style={{marginTop:'38px', marginBottom:'0px'}}>{item.name}</h4>
+                    <div className='cart-product'>
+
+                    <div className='cart-quantity'>
+
+                    <CgRemove style={{color:'white',cursor: 'pointer', position:'relative', top: '50%'}} onClick={() => removeItem(item.id)} />
+                    <p>{item.quantity}</p>
+                    <CgAdd style={{color:'white',cursor: 'pointer', position:'relative', top: '50%'}} onClick={() => addItem(item.id)} />
+                    </div>
+                    <p> $ {item.price}</p>
+                    
+                    </div>
+                    
+                  </div>
                 ))}
-              </ul>
+                <div className='cart-total-Products'>
+                <p>_______________________________________</p>
+                <p className="cart-title">Total Productos: {totalItems()}</p>
+                <p className="cart-title">Total: $ {totalCart()}</p>
+                
+                  <FaRegTrashCan className="clear-button" style={{color:'white',cursor: 'pointer', position:'relative', top: '50%'}}  onClick={() => clearCart()}/>
+                 
+                
+                </div>
+
+                <button className='button-buy'>Comprar</button>
+              </>
             ) : (
-              <p>El carrito está vacío.</p>
-            )}
+              <p>No hay productos en el carrito</p>
+              )}
           </div>
         </div>
-      )}
-    </div>
-    <InformativeModal isOpen={isOpenModa} setIsOpen={setIsOpenModal} title={'Modal Carrito'} description={'Esta es la descripciond el carrito aca bvas a poder ver los objetos que fuiste agregando para realizar tu compra.'}/>
-    </>
-  );
-};
+        )}
+      </div>
+        
+        </>)
+        
+}
 
-export default CartButton;
+
+export default CartButton

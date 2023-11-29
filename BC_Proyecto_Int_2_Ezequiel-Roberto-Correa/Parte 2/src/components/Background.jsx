@@ -4,7 +4,7 @@ import video from './images/video2.mp4'
 const Background = () => {
   return (
     <div>
-        <video onLoad="mostrarVideo()" id="videoFondo" muted autoPlay loop>
+        <video   muted autoPlay loop>
             <source id="mostrarVideo" src={video}/>
         </video>
         

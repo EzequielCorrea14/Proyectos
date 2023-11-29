@@ -9,13 +9,13 @@ const SliderInfo = () => {
             <ul className="slider">
                 <li id="slider1">
                     
-                <IoCard />Aceptamos todos los medios de pago</li>
+                <IoCard style={{fontSize:'30px'}}/>Aceptamos todos los medios de pago</li>
                 <li id="slider2">
                     
-                <IoTimeOutline />Lu. a Vie. 9hs a 20hs</li>
+                <IoTimeOutline style={{fontSize:'30px'}}/>Lu. a Vie. 9hs a 20hs</li>
                 <li id="slider3">
                     
-                <IoLocationOutline />Calle 1354,Caba,Argentina</li>
+                <IoLocationOutline style={{fontSize:'30px'}}/>Calle 1354,Caba,Argentina</li>
             </ul>
             <ul className="menuSlider">
                 <li>

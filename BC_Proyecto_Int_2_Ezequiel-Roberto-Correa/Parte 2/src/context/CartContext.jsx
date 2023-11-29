@@ -1,37 +1,90 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import { toast } from "react-toastify";
 
 export const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
+
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
     const cartStorage = localStorage.getItem("cart");
-    cartStorage !== null && setCart(JSON.parse(cartStorage));
+    if (cartStorage) {
+      setCart(cartStorage ? JSON.parse(cartStorage) : []);
+    }
   }, []);
+  
+  const addToCart = (item) => {
 
-  useEffect(() => {
-      localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart])
+    item.stock = cart.find((i) => i.id === item.id)
+      ? item.stock
+      : item.stock - 1;
+    item.quantity = cart.find((i) => i.id === item.id) ? item.quantity + 1 : 1;
+    const newCart = cart.filter((i) => i.id !== item.id);
+    localStorage.setItem("cart", JSON.stringify([...newCart, item]));
+    setCart([...newCart, item]);
+    toast.success("Producto agregado al carrito.");
+  };
 
-  const addToCart = (product) => {
-    //Solo puedo agregar ese producto una vez.
-    const cartUniqueIds = new Set();
-    cart.forEach((cartProduct) => cartUniqueIds.add(cartProduct.id));
-    if (!cartUniqueIds.has(product.id)) {
-      setCart((prevState) => [...prevState, product]);
-      toast.success("Producto agregado al carrito.");
-    } else {
-      toast.warning("El producto que quieres agregar ya existe en el carrito.");
+  const removeItem = (id) => {
+    if (cart.find((item) => item.id === id).quantity > 1) {
+      const newCart = cart.map((item) => {
+        if (item.id === id) {
+          item.quantity = item.quantity - 1;
+          item.stock = item.stock + 1;
+        }
+        return item;
+      });
+      localStorage.setItem("cart", JSON.stringify(newCart));
+      setCart(newCart);
+      toast.warning("Producto eliminado del carrito.");
+    } else if (cart.find((item) => item.id === id).quantity === 1) {
+      const newCart = cart.filter((item) => item.id !== id);
+      localStorage.setItem("cart", JSON.stringify(newCart));
+      setCart(newCart);
+      toast.warning("Producto eliminado del carrito.");
     }
   };
-  const removeFromCart = (productId) => {
-    const newCart = cart.filter((productCart) => productCart.id !== productId);
+
+  const addItem = (id) => {
+    const newCart = cart.map((item) => {
+      if (item.id === id) {
+        item.quantity = item.quantity + 1;
+        item.stock = item.stock - 1;
+      }
+      return item;
+    });
+    localStorage.setItem("cart", JSON.stringify(newCart));
     setCart(newCart);
+    toast.success("Producto agregado al carrito.");
+  }
+
+  const clearCart = () => {
+    localStorage.removeItem("cart");
+    setCart([]);
+    toast.info("Carrito vaciado.");
   };
+
+  const totalItems = () => {
+    return cart.reduce((acc, item) => acc + item.quantity, 0);
+  };
+
+  const totalCart = () => {
+    return cart.reduce((acc, item) => acc + item.quantity * item.price, 0);
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider
+      value={{
+        cart,
+        addToCart,
+        removeItem,
+        clearCart,
+        totalItems,
+        totalCart,
+        addItem,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );

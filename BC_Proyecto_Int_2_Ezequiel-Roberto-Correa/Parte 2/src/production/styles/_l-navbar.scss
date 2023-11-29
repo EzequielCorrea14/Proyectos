@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;500;600;700&display=swap');
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+}
+
+.navbarImage {
+    height: 40px;
+    margin-left: 67%;
+    margin-top: 24%;
+}
+
+.navbar-link {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-right: -10%;
+}
+
+.activate{
+    font-family: "Sen", sans-serif;
+        color: white;
+        text-decoration: none;
+    
+}
+
+.h2-navbar {
+    font-family: "Sen", sans-serif;
+    color: white;
+    margin-left: 26%;
+    font-size: 25px;
+}
