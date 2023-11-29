@@ -189,8 +189,8 @@ html {
 
 .cart {
   position: absolute;
-  top: 78px;
-  right: 8px;
+  top: 149px;
+  right: -9px;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   width: 300px;
@@ -443,28 +443,24 @@ nav {
   width: 100%;
   top: 0px;
 }
-
-.navbarImage {
+nav .navbarImage {
   height: 40px;
   margin-left: 67%;
   margin-top: 24%;
 }
-
-.navbar-link {
-  list-style: none;
+nav .navbarLink {
   display: flex;
   flex-direction: row;
-  gap: 12px;
-  margin-right: -10%;
+  align-items: center;
+  gap: 18px;
+  margin-right: -215px;
 }
-
-.activate {
+nav .activate {
   font-family: "Sen", sans-serif;
   color: white;
   text-decoration: none;
 }
-
-.h2-navbar {
+nav .h2-navbar {
   font-family: "Sen", sans-serif;
   color: white;
   margin-left: 26%;
@@ -731,6 +727,69 @@ p {
   grid-template-columns: repeat(2, 1fr);
 }
 
+@media screen and (max-width: 768px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(67, 67, 67, 0.434);
+    height: auto;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    position: relative;
+    top: 5rem;
+    left: 4%;
+    width: 89%;
+    align-items: center;
+    margin: 5px;
+  }
+  .h3-models {
+    font-family: "Sen", sans-serif;
+    color: white;
+    margin-left: 22%;
+    font-size: 28px;
+    position: relative;
+    margin-top: 16rem;
+  }
+}
+.links {
+  display: flex;
+}
+
+@media screen and (max-width: 576px) {
+  .product-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #product-list-container {
+    margin-top: 19rem;
+  }
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(67, 67, 67, 0.434);
+    height: auto;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    position: relative;
+    top: 5rem;
+    left: 4%;
+    width: 89%;
+    align-items: center;
+    margin: 5px;
+  }
+  .h3-models {
+    font-family: "Sen", sans-serif;
+    color: white;
+    margin-left: 22%;
+    font-size: 28px;
+    position: relative;
+    margin-top: 16rem;
+  }
+}
 .artFooter {
   background-color: rgba(0, 0, 0, 0.762);
   position: relative;

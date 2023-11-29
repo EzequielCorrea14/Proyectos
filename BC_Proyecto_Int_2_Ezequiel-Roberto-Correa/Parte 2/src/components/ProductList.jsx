@@ -11,7 +11,7 @@ const ProductList = ({ products, fetchProductsData }) => {
 
   return (
     <>
-      <div>
+      <div id="product-list-container">
       <h3 className="h3-models">Modelos disponibles</h3>
       <div className="product-list">
         {products.map((product) => (

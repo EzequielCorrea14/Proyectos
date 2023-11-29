@@ -1,19 +1,20 @@
 import { useContext, useState } from "react";
-import { toast } from "react-toastify";
+
 import { FaCartShopping} from "react-icons/fa6";
 import { CartContext } from "../context/CartContext";
 import { PiEngineBold } from "react-icons/pi";
 import { LiaTachometerAltSolid } from "react-icons/lia";
 import { BsFuelPump } from "react-icons/bs";
-import ImageSliderHome from '../Pages/Home/Components/ImageSliderHome'
+import ImageSliderProduct from './ImageSliderProduct'
+import image1 from '../Pages/Home/Components/images/sport.jpg'
 
 const ProductCard = ({ product, fetchProductsData }) => {
   const { addToCart } = useContext(CartContext)
  
-  const imagesModel = [ 
-    {url: `${product.image1}`},
-    {url: `${product.image2}`},
-    {url: `${product.image3}`},
+  const mockImages = [ 
+     image1,
+     product.image2,
+    product.image3,
 
 
   ];
@@ -27,11 +28,9 @@ const ProductCard = ({ product, fetchProductsData }) => {
             
             <section className="masVendido">
               
+                <ImageSliderProduct images={mockImages}/>
             
-                <div className="slider">
-                      
-                <ImageSliderHome images={imagesModel}/>
-                </div>
+              
                 
                 <div id="infoMoto">
                     <div id="infoIconos">

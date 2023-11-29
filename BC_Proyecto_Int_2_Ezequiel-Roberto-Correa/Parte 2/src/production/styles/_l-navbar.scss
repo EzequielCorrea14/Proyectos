@@ -10,26 +10,27 @@ nav {
     position: fixed;
     width: 100%;
     top: 0px;
-}
-
-.navbarImage {
+    
+    .navbarImage {
     height: 40px;
     margin-left: 67%;
     margin-top: 24%;
 }
 
-.navbar-link {
-    list-style: none;
+.navbarLink {
+    
     display: flex;
     flex-direction: row;
-    gap: 12px;
-    margin-right: -10%;
+    align-items: center;
+    gap: 18px;
+    margin-right: -215px;
+    
 }
 
 .activate{
     font-family: "Sen", sans-serif;
-        color: white;
-        text-decoration: none;
+    color: white;
+    text-decoration: none;
     
 }
 
@@ -38,4 +39,10 @@ nav {
     color: white;
     margin-left: 26%;
     font-size: 25px;
+}
+
+}
+
+@media screen and (max-width: 576px) {
+
 }
