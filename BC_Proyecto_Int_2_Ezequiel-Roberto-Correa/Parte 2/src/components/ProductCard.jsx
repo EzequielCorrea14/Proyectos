@@ -12,7 +12,7 @@ const ProductCard = ({ product, fetchProductsData }) => {
   const { addToCart } = useContext(CartContext)
  
   const mockImages = [ 
-     image1,
+     product.image1,
      product.image2,
     product.image3,
 

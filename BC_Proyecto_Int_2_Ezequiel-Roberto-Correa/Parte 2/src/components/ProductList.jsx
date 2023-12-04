@@ -21,7 +21,7 @@ const ProductList = ({ products, fetchProductsData }) => {
             product={product}
             fetchProductsData={fetchProductsData}
           />
-        ),console.log(ProductCard)  
+        )
         )}
       </div>
       </div>
